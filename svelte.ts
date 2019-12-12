@@ -3,7 +3,7 @@ import autoprefixer from 'autoprefixer'
 import importer__package from 'node-sass-package-importer'
 import postcss from 'postcss'
 import { parseDOM } from 'htmlparser2/lib'
-import ElementType from 'domelementtype'
+import { Tag } from 'domelementtype'
 import { getOuterHTML } from 'domutils/lib/stringify'
 import cheerio from 'cheerio'
 import {
@@ -122,7 +122,7 @@ export function _markup__sass(opts__builder:Opts__builder = {}) {
 		})
 		const promise_a1 = map(dom, async node=>{
 			if (
-				node.type === ElementType.Tag
+				node.type === Tag
 				&& node.name == 'svelte:head'
 			) {
 				const $ = cheerio.load(node)
