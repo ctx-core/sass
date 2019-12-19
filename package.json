@@ -11,6 +11,9 @@
 		"compile": "tsc -b",
 		"prepublishOnly": "npm run compile"
 	},
+	"bin": {
+		"npm-rebuild-node-sass.sh": "bin/npm-rebuild-node-sass.sh"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ctx-core/sass/issues"
