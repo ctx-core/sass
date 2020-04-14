@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "6.4.20",
+	"version": "6.4.21",
 	"description": "ctx-core sass",
 	"main": "svelte.js",
 	"module": "svelte.js",
@@ -34,7 +34,7 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^15.5.13",
+		"@ctx-core/array": "^15.5.14",
 		"@ctx-core/logger": "^3.1.14",
 		"@ctx-core/string": "^4.3.15",
 		"autoprefixer": "^9.7.6",
