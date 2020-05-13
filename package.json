@@ -43,10 +43,10 @@
 		"htmlparser2": "^4.1.0",
 		"node-sass": "^4.14.1",
 		"node-sass-package-importer": "^5.3.2",
-		"postcss": "^7.0.29"
+		"postcss": "^7.0.30"
 	},
 	"devDependencies": {
-		"typescript": "^3.8.3"
+		"typescript": "^3.9.2"
 	},
 	"gitHead": "ecded533c5d9946e2d9dafa39dbc95ce3e38ad93"
 }
