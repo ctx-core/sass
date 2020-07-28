@@ -11,7 +11,7 @@ import {
 	map,
 	compact,
 	flatten,
-	_present__a1,
+	_a1_present,
 } from '@ctx-core/array'
 import { splice__str } from '@ctx-core/string'
 import { error } from '@ctx-core/logger'
@@ -145,7 +145,7 @@ export function _markup__sass(opts__builder:Opts__builder = {}) {
 			}
 		})
 		const node_a1 = await Promise.all(promise_a1)
-		if (_present__a1(flatten(compact(node_a1)))) {
+		if (_a1_present(flatten(compact(node_a1)))) {
 			return {
 				code: getOuterHTML(dom),
 				map: null,
