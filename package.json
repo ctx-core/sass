@@ -37,7 +37,7 @@
 		"@ctx-core/array": "^16.0.1",
 		"@ctx-core/logger": "^3.1.21",
 		"@ctx-core/string": "^4.3.26",
-		"autoprefixer": "^9.8.5",
+		"autoprefixer": "^9.8.6",
 		"cheerio": "^1.0.0-rc.3",
 		"domutils": "^2.1.0",
 		"htmlparser2": "^4.1.0",
