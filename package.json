@@ -35,7 +35,6 @@
 	},
 	"dependencies": {
 		"@ctx-core/array": "^16.0.13",
-		"@ctx-core/logger": "^3.1.23",
 		"@ctx-core/string": "^4.3.28",
 		"autoprefixer": "^9.8.6",
 		"cheerio": "^1.0.0-rc.3",

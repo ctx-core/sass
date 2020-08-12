@@ -7,14 +7,9 @@ import { Tag } from 'domelementtype'
 import { getOuterHTML } from 'domutils/lib/stringify'
 import cheerio from 'cheerio'
 import {
-	each,
-	map,
-	compact,
-	flatten,
-	_a1_present,
+	each, map, compact, flatten, _a1_present,
 } from '@ctx-core/array'
 import { splice__str } from '@ctx-core/string'
-import { error } from '@ctx-core/logger'
 /**
  * @typedef AST__PostCSS
  */
@@ -34,7 +29,7 @@ async function render__sass(opts__builder:Opts__builder, opts):Promise<Plugin_Ou
 			outFile: 'x' // this is necessary, but is ignored
 		}, async (err, result)=>{
 			if (err) {
-				error(`Error in\n${filename}`)
+				console.error(`Error in\n${filename}`)
 				return reject(err)
 			}
 			const css = result.css.toString()
