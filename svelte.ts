@@ -13,20 +13,22 @@ import { splice__str } from '@ctx-core/string'
 /**
  * @typedef AST__PostCSS
  */
-type Opts__builder = {
-	postcss_plugins?:any[]
+type builder_opts_type = {
+	postcss_plugins?:any[],
+	functions?: any,
 }
 type Plugin_Output = { code:string, map:string }
-async function render__sass(opts__builder:Opts__builder, opts):Promise<Plugin_Output> {
-	const { postcss_plugins = [autoprefixer] } = opts__builder
+async function render_sass(builder_opts:builder_opts_type, opts):Promise<Plugin_Output> {
+	const { postcss_plugins = [autoprefixer] } = builder_opts
 	const { filename, content, attributes } = opts
 	return new Promise((fulfil, reject)=>{
 		sass.render({
 			data: content,
 			includePaths: ['src'],
 			importer: importer__package(),
+			functions: builder_opts.functions,
 			sourceMap: true,
-			outFile: 'x' // this is necessary, but is ignored
+			outFile: 'x', // this is necessary, but is ignored
 		}, async (err, result)=>{
 			if (err) {
 				console.error(`Error in\n${filename}`)
@@ -48,16 +50,16 @@ async function render__sass(opts__builder:Opts__builder, opts):Promise<Plugin_Ou
 }
 /**
  * Builder Function that returns a style__sass preprocessor for Svelte.
- * @param opts__builder
- * @param opts__builder.postcss_plugins [autoprefixer]: Plugins for postcss
+ * @param builder_opts
+ * @param builder_opts.postcss_plugins [autoprefixer]: Plugins for postcss
  * @returns {function(*): Promise<{code, map}>}
  */
-export function _style__sass(opts__builder:Opts__builder = {}) {
+export function _style__sass(builder_opts:builder_opts_type = {}) {
 	return function style__sass(opts) {
 		const { attributes } = opts
 		const { type } = attributes
 		if (type !== 'text/scss' && type !== 'text/sass') return
-		return render__sass(opts__builder, opts)
+		return render_sass(builder_opts, opts)
 	}
 }
 /**
@@ -77,29 +79,29 @@ export const style = style__sass
 export function globalize(ast) {
 	let selector = '' + (ast.selector || '')
 	if (selector) {
-		const a2__arg__splice = []
-		const length__selector = selector.length
+		const splice_arg_a2 = []
+		const selector_length = selector.length
 		let idx = 0
-		const str__global = ':global('
-		const len__str__global = str__global.length
+		const global_str = ':global('
+		const global_str_len = global_str.length
 		do {
-			const idx__begin = selector.indexOf(str__global, idx)
-			if (idx__begin === -1) break
-			a2__arg__splice.push([idx__begin, len__str__global])
-			idx = idx__begin + len__str__global
-			let rc__paren = 1
+			const begin_idx = selector.indexOf(global_str, idx)
+			if (begin_idx === -1) break
+			splice_arg_a2.push([begin_idx, global_str_len])
+			idx = begin_idx + global_str_len
+			let paren_rc = 1
 			let char
 			do {
 				char = selector.slice(idx, idx + 1)
-				if (char === ')') rc__paren -= 1
-				else if (char === '(') rc__paren += 1
+				if (char === ')') paren_rc -= 1
+				else if (char === '(') paren_rc += 1
 				idx += 1
-			} while (rc__paren && char != null && idx < length__selector)
-			a2__arg__splice.push([idx - 1, 1])
-		} while (idx !== -1 && idx < length__selector)
-		for (let i = a2__arg__splice.length - 1; i >= 0; i -= 1) {
-			const a1__arg__splice = a2__arg__splice[i]
-			selector = splice__str(selector, ...a1__arg__splice)
+			} while (paren_rc && char != null && idx < selector_length)
+			splice_arg_a2.push([idx - 1, 1])
+		} while (idx !== -1 && idx < selector_length)
+		for (let i = splice_arg_a2.length - 1; i >= 0; i -= 1) {
+			const splice_arg_a1 = splice_arg_a2[i]
+			selector = splice__str(selector, ...splice_arg_a1)
 		}
 //		selector.split(/[\s+[>\+\~]\s*]/)
 		ast.selector = `:global(${selector})`
@@ -108,7 +110,7 @@ export function globalize(ast) {
 	each(ast.nodes, globalize)
 	return ast
 }
-export function _markup__sass(opts__builder:Opts__builder = {}) {
+export function _markup__sass(builder_opts:builder_opts_type = {}) {
 	return async opts=>{
 		const { filename, content, attributes, } = opts
 		const dom = parseDOM(content, {
@@ -126,7 +128,7 @@ export function _markup__sass(opts__builder:Opts__builder = {}) {
 					async style_node=>{
 						const text_node = style_node.firstChild
 						const { data } = text_node
-						const { code } = await render__sass(opts__builder, {
+						const { code } = await render_sass(builder_opts, {
 							filename,
 							content: data,
 							attributes,
@@ -148,11 +150,12 @@ export function _markup__sass(opts__builder:Opts__builder = {}) {
 		}
 	}
 }
-export function _preprocess__sass(opts__builder = {}) {
-	const style = _style__sass(opts__builder)
+export function _preprocess_sass(builder_opts = {}) {
+	const style = _style__sass(builder_opts)
 	const markup = _markup__sass()
 	return {
 		style,
 		markup,
 	}
 }
+export const _preprocess__sass = _preprocess_sass

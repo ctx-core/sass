@@ -45,6 +45,7 @@
 		"postcss": "^7.0.32"
 	},
 	"devDependencies": {
+		"@types/sass": "^1.16.0",
 		"typescript": "^3.9.7"
 	},
 	"gitHead": "d432f95331054345887d708506267b802483aa2d"

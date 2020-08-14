@@ -1,8 +1,9 @@
 /**
  * @typedef AST__PostCSS
  */
-declare type Opts__builder = {
+declare type builder_opts_type = {
     postcss_plugins?: any[];
+    functions?: any;
 };
 declare type Plugin_Output = {
     code: string;
@@ -10,11 +11,11 @@ declare type Plugin_Output = {
 };
 /**
  * Builder Function that returns a style__sass preprocessor for Svelte.
- * @param opts__builder
- * @param opts__builder.postcss_plugins [autoprefixer]: Plugins for postcss
+ * @param builder_opts
+ * @param builder_opts.postcss_plugins [autoprefixer]: Plugins for postcss
  * @returns {function(*): Promise<{code, map}>}
  */
-export declare function _style__sass(opts__builder?: Opts__builder): (opts: any) => Promise<Plugin_Output>;
+export declare function _style__sass(builder_opts?: builder_opts_type): (opts: any) => Promise<Plugin_Output>;
 /**
  * Default style__sass preprocessor for Svelte.
  * @param opts.filename
@@ -30,15 +31,16 @@ export declare const style: (opts: any) => Promise<Plugin_Output>;
  * @returns {AST__PostCSS}
  */
 export declare function globalize(ast: any): any;
-export declare function _markup__sass(opts__builder?: Opts__builder): (opts: any) => Promise<{
+export declare function _markup__sass(builder_opts?: builder_opts_type): (opts: any) => Promise<{
     code: string;
     map: any;
 }>;
-export declare function _preprocess__sass(opts__builder?: {}): {
+export declare function _preprocess_sass(builder_opts?: {}): {
     style: (opts: any) => Promise<Plugin_Output>;
     markup: (opts: any) => Promise<{
         code: string;
         map: any;
     }>;
 };
+export declare const _preprocess__sass: typeof _preprocess_sass;
 export {};
