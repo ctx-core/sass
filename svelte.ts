@@ -150,7 +150,7 @@ export function _markup__sass(builder_opts:builder_opts_type = {}) {
 		}
 	}
 }
-export function _preprocess_sass(builder_opts = {}) {
+export function _preprocess_sass(builder_opts: builder_opts_type = {}) {
 	const style = _style__sass(builder_opts)
 	const markup = _markup__sass()
 	return {

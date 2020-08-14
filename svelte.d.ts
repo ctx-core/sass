@@ -35,7 +35,7 @@ export declare function _markup__sass(builder_opts?: builder_opts_type): (opts: 
     code: string;
     map: any;
 }>;
-export declare function _preprocess_sass(builder_opts?: {}): {
+export declare function _preprocess_sass(builder_opts?: builder_opts_type): {
     style: (opts: any) => Promise<Plugin_Output>;
     markup: (opts: any) => Promise<{
         code: string;
