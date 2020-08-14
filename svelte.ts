@@ -1,6 +1,6 @@
 import sass from 'node-sass'
 import autoprefixer from 'autoprefixer'
-import importer__package from 'node-sass-package-importer'
+import package_importer from 'node-sass-package-importer'
 import postcss from 'postcss'
 import { parseDOM } from 'htmlparser2/lib'
 import { Tag } from 'domelementtype'
@@ -15,17 +15,25 @@ import { splice__str } from '@ctx-core/string'
  */
 type builder_opts_type = {
 	postcss_plugins?:any[],
-	functions?: any,
+	functions?:any,
 }
 type Plugin_Output = { code:string, map:string }
-async function render_sass(builder_opts:builder_opts_type, opts):Promise<Plugin_Output> {
+type opts_type = {
+	filename:string
+	content:string
+	attributes:{
+		type?:string
+		global?:any
+	}
+}
+async function render_sass(builder_opts:builder_opts_type, opts:opts_type):Promise<Plugin_Output> {
 	const { postcss_plugins = [autoprefixer] } = builder_opts
 	const { filename, content, attributes } = opts
 	return new Promise((fulfil, reject)=>{
 		sass.render({
 			data: content,
 			includePaths: ['src'],
-			importer: importer__package(),
+			importer: package_importer(),
 			functions: builder_opts.functions,
 			sourceMap: true,
 			outFile: 'x', // this is necessary, but is ignored
@@ -37,40 +45,41 @@ async function render_sass(builder_opts:builder_opts_type, opts):Promise<Plugin_
 			const css = result.css.toString()
 			let ast = postcss.parse(css)
 			if (attributes?.global) ast = globalize(ast)
-			const result__ =
+			const postcss_result =
 				await postcss(postcss_plugins).process(ast.toResult().css, {
 					from: filename,
 				})
 			fulfil({
-				code: result__.css,
+				code: postcss_result.css,
 				map: result.map.toString()
 			})
 		})
 	})
 }
 /**
- * Builder Function that returns a style__sass preprocessor for Svelte.
+ * Builder Function that returns a sass_style preprocessor for Svelte.
  * @param builder_opts
  * @param builder_opts.postcss_plugins [autoprefixer]: Plugins for postcss
  * @returns {function(*): Promise<{code, map}>}
  */
-export function _style__sass(builder_opts:builder_opts_type = {}) {
-	return function style__sass(opts) {
+export function _sass_style(builder_opts:builder_opts_type = {}) {
+	return function sass_style(opts:opts_type) {
 		const { attributes } = opts
 		const { type } = attributes
 		if (type !== 'text/scss' && type !== 'text/sass') return
 		return render_sass(builder_opts, opts)
 	}
 }
+export const _style__sass = _sass_style
 /**
- * Default style__sass preprocessor for Svelte.
+ * Default sass_style preprocessor for Svelte.
  * @param opts.filename
  * @param opts.content
  * @param opts.attributes
  * @returns {Promise<{code, map}>} A promise returning `{ code, map }`
  */
-export const style__sass = _style__sass()
-export const style = style__sass
+export const sass_style = _sass_style()
+export const style = sass_style
 /**
  * Takes a postcss ast & wraps each selector with the `:global()` svelte css directive.
  * @param {AST__PostCSS} ast
@@ -110,8 +119,8 @@ export function globalize(ast) {
 	each(ast.nodes, globalize)
 	return ast
 }
-export function _markup__sass(builder_opts:builder_opts_type = {}) {
-	return async opts=>{
+export function _sass_markup(builder_opts:builder_opts_type = {}) {
+	return async (opts:opts_type)=>{
 		const { filename, content, attributes, } = opts
 		const dom = parseDOM(content, {
 			lowerCaseTags: false,
@@ -150,12 +159,10 @@ export function _markup__sass(builder_opts:builder_opts_type = {}) {
 		}
 	}
 }
-export function _preprocess_sass(builder_opts: builder_opts_type = {}) {
-	const style = _style__sass(builder_opts)
-	const markup = _markup__sass()
-	return {
-		style,
-		markup,
-	}
+export const _markup__sass = _sass_markup
+export function _preprocess_sass(builder_opts:builder_opts_type = {}) {
+	const style = _sass_style(builder_opts)
+	const markup = _sass_markup(builder_opts)
+	return { style, markup }
 }
 export const _preprocess__sass = _preprocess_sass
