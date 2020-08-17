@@ -9,7 +9,7 @@ import cheerio from 'cheerio'
 import {
 	each, map, compact, flatten, _a1_present,
 } from '@ctx-core/array'
-import { splice__str } from '@ctx-core/string'
+import { splice_str } from '@ctx-core/string'
 /**
  * @typedef AST__PostCSS
  */
@@ -110,7 +110,7 @@ export function globalize(ast) {
 		} while (idx !== -1 && idx < selector_length)
 		for (let i = splice_arg_a2.length - 1; i >= 0; i -= 1) {
 			const splice_arg_a1 = splice_arg_a2[i]
-			selector = splice__str(selector, ...splice_arg_a1)
+			selector = splice_str(selector, ...splice_arg_a1)
 		}
 //		selector.split(/[\s+[>\+\~]\s*]/)
 		ast.selector = `:global(${selector})`
