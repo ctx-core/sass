@@ -46,7 +46,7 @@
 	},
 	"devDependencies": {
 		"@types/sass": "^1.16.0",
-		"typescript": "^3.9.7"
+		"typescript": "^4.0.2"
 	},
 	"gitHead": "d432f95331054345887d708506267b802483aa2d"
 }
