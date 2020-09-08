@@ -34,7 +34,7 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^16.0.15",
+		"@ctx-core/array": "^17.0.0",
 		"@ctx-core/string": "^4.5.1",
 		"autoprefixer": "^9.8.6",
 		"cheerio": "^1.0.0-rc.3",
