@@ -1,20 +1,18 @@
 import sass from 'node-sass'
 import autoprefixer from 'autoprefixer'
 import package_importer from 'node-sass-package-importer'
-import postcss from 'postcss'
+import postcss, { AcceptedPlugin } from 'postcss'
 import { parseDOM } from 'htmlparser2/lib'
-import { Tag } from 'domelementtype'
 import { getOuterHTML } from 'domutils/lib/stringify'
 import cheerio from 'cheerio'
 import {
-	each, map, compact, flatten, _a1_present,
+	each, compact, flatten, _a1_present,
 } from '@ctx-core/array'
 import { splice_str } from '@ctx-core/string'
-/**
- * @typedef AST__PostCSS
- */
+import type { Element } from 'domhandler/lib/node'
+import { Tag } from 'domelementtype'
 type builder_opts_type = {
-	postcss_plugins?:any[],
+	postcss_plugins?:AcceptedPlugin[],
 	functions?:any,
 }
 type Plugin_Output = { code:string, map:string }
@@ -27,7 +25,7 @@ type opts_type = {
 	}
 }
 async function render_sass(builder_opts:builder_opts_type, opts:opts_type):Promise<Plugin_Output> {
-	const { postcss_plugins = [autoprefixer] } = builder_opts
+	const { postcss_plugins = [autoprefixer] as AcceptedPlugin[] } = builder_opts
 	const { filename, content, attributes } = opts
 	return new Promise((fulfil, reject)=>{
 		sass.render({
@@ -126,30 +124,33 @@ export function _sass_markup(builder_opts:builder_opts_type = {}) {
 			lowerCaseTags: false,
 			lowerCaseAttributeNames: false,
 		})
-		const promise_a1 = map(dom, async node=>{
+		const promise_a1 = dom.map(async (node: Element)=>{
 			if (
-				node.type === Tag
+				node.type.toString() === Tag.toString()
 				&& node.name == 'svelte:head'
 			) {
 				const $ = cheerio.load(node)
-				const promise_a1 = map(
-					$(`style[type='text/sass'], style[type='text/scss']`),
-					async style_node=>{
+				const promise_a1 = $(`style[type='text/sass'], style[type='text/scss']`).map(
+					style_node=>{
 						const text_node = style_node.firstChild
 						const { data } = text_node
-						const { code } = await render_sass(builder_opts, {
-							filename,
-							content: data,
-							attributes,
-						})
-						style_node.attribs.type = 'text/css'
-						delete style_node.attribs.global
-						text_node.data = code
-						return style_node
+						return (
+							async ()=>{
+								const { code } = await render_sass(builder_opts, {
+									filename,
+									content: data,
+									attributes,
+								})
+								style_node.attribs.type = 'text/css'
+								delete style_node.attribs.global
+								text_node.data = code
+								return style_node
+							}
+						)()
 					})
-				return Promise.all(promise_a1)
+				return Promise.all(promise_a1) as Promise<Node[]>
 			}
-		})
+		}) as Promise<Node[]>[]
 		const node_a1 = await Promise.all(promise_a1)
 		if (_a1_present(flatten(compact(node_a1)))) {
 			return {

@@ -1,8 +1,6 @@
-/**
- * @typedef AST__PostCSS
- */
+import { AcceptedPlugin } from 'postcss';
 declare type builder_opts_type = {
-    postcss_plugins?: any[];
+    postcss_plugins?: AcceptedPlugin[];
     functions?: any;
 };
 declare type Plugin_Output = {
