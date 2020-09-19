@@ -1,5 +1,17 @@
 # @ctx-core/sass
 
+## 8.0.0
+
+### Major Changes
+
+- Typescript strict checking
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.0.0
+  - @ctx-core/string@5.0.0
+
 ## 7.1.13
 
 ### Patch Changes

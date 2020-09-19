@@ -80,13 +80,11 @@ export const sass_style = _sass_style()
 export const style = sass_style
 /**
  * Takes a postcss ast & wraps each selector with the `:global()` svelte css directive.
- * @param {AST__PostCSS} ast
- * @returns {AST__PostCSS}
  */
 export function globalize(ast) {
 	let selector = '' + (ast.selector || '')
 	if (selector) {
-		const splice_arg_a2 = []
+		const splice_arg_a2 = [] as number[][]
 		const selector_length = selector.length
 		let idx = 0
 		const global_str = ':global('
@@ -124,7 +122,8 @@ export function _sass_markup(builder_opts:builder_opts_type = {}) {
 			lowerCaseTags: false,
 			lowerCaseAttributeNames: false,
 		})
-		const promise_a1 = dom.map(async (node: Element)=>{
+		const promise_a1 = dom.map(async in_node=>{
+			const node = in_node as Element
 			if (
 				node.type.toString() === Tag.toString()
 				&& node.name == 'svelte:head'
