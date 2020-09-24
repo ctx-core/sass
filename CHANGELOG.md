@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.21
+
+### Patch Changes
+
+- render_sass: console.trace exceptions with error message.
+
 ## 8.0.20
 
 ### Patch Changes

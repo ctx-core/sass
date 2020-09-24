@@ -24,7 +24,7 @@ async function render_sass(builder_opts:builder_opts_type, opts:opts_type):Promi
 			outFile: 'x', // this is necessary, but is ignored
 		}, async (err, result)=>{
 			if (err) {
-				console.error(`Error in\n${filename}`)
+				console.trace(`Error in\n${filename}: ${err}`)
 				return reject(err)
 			}
 			const css = result.css.toString()
