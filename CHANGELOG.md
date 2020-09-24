@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.20
+
+### Patch Changes
+
+- fix: render_sass: runtime issue when no :global sass nodes
+
 ## 8.0.19
 
 ### Patch Changes

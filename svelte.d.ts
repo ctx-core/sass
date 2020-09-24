@@ -1,25 +1,8 @@
 import { AcceptedPlugin } from 'postcss';
-declare type builder_opts_type = {
-    postcss_plugins?: AcceptedPlugin[];
-    functions?: any;
-};
-declare type Plugin_Output = {
-    code: string;
-    map: string;
-};
-declare type opts_type = {
-    filename: string;
-    content: string;
-    attributes: {
-        type?: string;
-        global?: any;
-    };
-};
 /**
  * Builder Function that returns a sass_style preprocessor for Svelte.
  * @param builder_opts
  * @param builder_opts.postcss_plugins [autoprefixer]: Plugins for postcss
- * @returns {function(*): Promise<{code, map}>}
  */
 export declare function _sass_style(builder_opts?: builder_opts_type): (opts: opts_type) => Promise<Plugin_Output> | undefined;
 export declare const _style__sass: typeof _sass_style;
@@ -28,7 +11,6 @@ export declare const _style__sass: typeof _sass_style;
  * @param opts.filename
  * @param opts.content
  * @param opts.attributes
- * @returns {Promise<{code, map}>} A promise returning `{ code, map }`
  */
 export declare const sass_style: (opts: opts_type) => Promise<Plugin_Output> | undefined;
 export declare const style: (opts: opts_type) => Promise<Plugin_Output> | undefined;
@@ -49,4 +31,20 @@ export declare function _preprocess_sass(builder_opts?: builder_opts_type): {
     } | undefined>;
 };
 export declare const _preprocess__sass: typeof _preprocess_sass;
+declare type builder_opts_type = {
+    postcss_plugins?: AcceptedPlugin[];
+    functions?: any;
+};
+declare type Plugin_Output = {
+    code: string;
+    map: string;
+};
+declare type opts_type = {
+    filename: string;
+    content: string;
+    attributes: {
+        type?: string;
+        global?: any;
+    };
+};
 export {};

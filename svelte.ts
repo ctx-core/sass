@@ -6,24 +6,11 @@ import { parseDOM } from 'htmlparser2/lib'
 import { getOuterHTML } from 'domutils/lib/stringify'
 import cheerio from 'cheerio'
 import {
-	each, compact, flatten, _a1_present,
+	compact, flatten, _a1_present, maybe_each,
 } from '@ctx-core/array'
 import { splice_str } from '@ctx-core/string'
 import type { Element } from 'domhandler/lib/node'
 import { Tag } from 'domelementtype'
-type builder_opts_type = {
-	postcss_plugins?:AcceptedPlugin[],
-	functions?:any,
-}
-type Plugin_Output = { code:string, map:string }
-type opts_type = {
-	filename:string
-	content:string
-	attributes:{
-		type?:string
-		global?:any
-	}
-}
 async function render_sass(builder_opts:builder_opts_type, opts:opts_type):Promise<Plugin_Output> {
 	const { postcss_plugins = [autoprefixer] as AcceptedPlugin[] } = builder_opts
 	const { filename, content, attributes } = opts
@@ -58,7 +45,6 @@ async function render_sass(builder_opts:builder_opts_type, opts:opts_type):Promi
  * Builder Function that returns a sass_style preprocessor for Svelte.
  * @param builder_opts
  * @param builder_opts.postcss_plugins [autoprefixer]: Plugins for postcss
- * @returns {function(*): Promise<{code, map}>}
  */
 export function _sass_style(builder_opts:builder_opts_type = {}) {
 	return function sass_style(opts:opts_type) {
@@ -74,7 +60,6 @@ export const _style__sass = _sass_style
  * @param opts.filename
  * @param opts.content
  * @param opts.attributes
- * @returns {Promise<{code, map}>} A promise returning `{ code, map }`
  */
 export const sass_style = _sass_style()
 export const style = sass_style
@@ -112,7 +97,7 @@ export function globalize(ast) {
 		ast.selector = `:global(${selector})`
 //		ast.selector = `:global(${selector.replace(/:global\((.*)\)/g, '$1')})`
 	}
-	each(ast.nodes, globalize)
+	maybe_each(ast.nodes, globalize)
 	return ast
 }
 export function _sass_markup(builder_opts:builder_opts_type = {}) {
@@ -166,3 +151,16 @@ export function _preprocess_sass(builder_opts:builder_opts_type = {}) {
 	return { style, markup }
 }
 export const _preprocess__sass = _preprocess_sass
+type builder_opts_type = {
+	postcss_plugins?:AcceptedPlugin[],
+	functions?:any,
+}
+type Plugin_Output = { code:string, map:string }
+type opts_type = {
+	filename:string
+	content:string
+	attributes:{
+		type?:string
+		global?:any
+	}
+}
