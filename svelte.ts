@@ -32,11 +32,13 @@ async function render_sass(
 			let ast = postcss.parse(css)
 			if (attributes?.global) ast = globalize(ast)
 			const postcss_result =
-				await postcss(postcss_plugins).process(ast.toResult().css, {
+				postcss_plugins?.length
+				? postcss(postcss_plugins).process(ast.toResult().css, {
 					from: filename,
-				})
+				}).css
+				: ast.toResult().css
 			fulfil({
-				code: postcss_result.css,
+				code: postcss_result,
 				map: result.map.toString()
 			})
 		})
@@ -45,7 +47,6 @@ async function render_sass(
 /**
  * Builder Function that returns a sass_style preprocessor for Svelte.
  * @param builder_opts
- * @param builder_opts.postcss_plugins []: Plugins for postcss
  */
 export function _sass_style(builder_opts:builder_opts_type = {}) {
 	return function sass_style(opts:opts_type) {

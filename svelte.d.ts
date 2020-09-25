@@ -2,7 +2,6 @@ import { AcceptedPlugin } from 'postcss';
 /**
  * Builder Function that returns a sass_style preprocessor for Svelte.
  * @param builder_opts
- * @param builder_opts.postcss_plugins []: Plugins for postcss
  */
 export declare function _sass_style(builder_opts?: builder_opts_type): (opts: opts_type) => Promise<Plugin_Output> | undefined;
 export declare const _style__sass: typeof _sass_style;

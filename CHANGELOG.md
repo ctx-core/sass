@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.26
+
+### Patch Changes
+
+- fix: warning when no postcss plugins issue
+
 ## 8.0.25
 
 ### Patch Changes
