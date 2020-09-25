@@ -1,5 +1,4 @@
 import sass from 'node-sass'
-import autoprefixer from 'autoprefixer'
 import package_importer from 'node-sass-package-importer'
 import postcss, { AcceptedPlugin } from 'postcss'
 import { parseDOM } from 'htmlparser2/lib'
@@ -14,7 +13,7 @@ import { Tag } from 'domelementtype'
 async function render_sass(
 	builder_opts:builder_opts_type, opts:opts_type
 ):Promise<Plugin_Output> {
-	const { postcss_plugins = [autoprefixer] as AcceptedPlugin[] } = builder_opts
+	const { postcss_plugins = [] as AcceptedPlugin[] } = builder_opts
 	const { filename, content, attributes } = opts
 	return new Promise((fulfil, reject)=>{
 		sass.render({
@@ -46,7 +45,7 @@ async function render_sass(
 /**
  * Builder Function that returns a sass_style preprocessor for Svelte.
  * @param builder_opts
- * @param builder_opts.postcss_plugins [autoprefixer]: Plugins for postcss
+ * @param builder_opts.postcss_plugins []: Plugins for postcss
  */
 export function _sass_style(builder_opts:builder_opts_type = {}) {
 	return function sass_style(opts:opts_type) {

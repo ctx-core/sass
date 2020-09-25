@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.25
+
+### Patch Changes
+
+- remove dependency on autoprefixer to avoid dependency clashes: \_preprocess_sass plugins defaults to []
+
 ## 8.0.24
 
 ### Patch Changes
