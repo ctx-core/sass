@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.22
+
+### Patch Changes
+
+- fix: \_preprocess_sass,\_\_sass_markup: issue rendering style[type=text/scss],style[type=text/sass]
+
 ## 8.0.21
 
 ### Patch Changes

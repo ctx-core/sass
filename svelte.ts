@@ -11,7 +11,9 @@ import {
 import { splice_str } from '@ctx-core/string'
 import type { Element } from 'domhandler/lib/node'
 import { Tag } from 'domelementtype'
-async function render_sass(builder_opts:builder_opts_type, opts:opts_type):Promise<Plugin_Output> {
+async function render_sass(
+	builder_opts:builder_opts_type, opts:opts_type
+):Promise<Plugin_Output> {
 	const { postcss_plugins = [autoprefixer] as AcceptedPlugin[] } = builder_opts
 	const { filename, content, attributes } = opts
 	return new Promise((fulfil, reject)=>{
@@ -114,25 +116,21 @@ export function _sass_markup(builder_opts:builder_opts_type = {}) {
 				&& node.name == 'svelte:head'
 			) {
 				const $ = cheerio.load(node)
-				const promise_a1 = $(`style[type='text/sass'], style[type='text/scss']`).map(
-					style_node=>{
-						const text_node = style_node.firstChild
-						const { data } = text_node
-						return (
-							async ()=>{
-								const { code } = await render_sass(builder_opts, {
-									filename,
-									content: data,
-									attributes,
-								})
-								style_node.attribs.type = 'text/css'
-								delete style_node.attribs.global
-								text_node.data = code
-								return style_node
-							}
-						)()
+				const style_node_a1 = $(`style[type='text/sass'], style[type='text/scss']`).get()
+				const promise_a1 = style_node_a1.map(async style_node=>{
+					const text_node = style_node.firstChild
+					const { data } = text_node
+					const { code } = await render_sass(builder_opts, {
+						filename,
+						content: data,
+						attributes,
 					})
-				return Promise.all(promise_a1) as Promise<Node[]>
+					style_node.attribs.type = 'text/css'
+					delete style_node.attribs.global
+					text_node.data = code
+					return style_node
+				})
+				return Promise.all(promise_a1)
 			}
 		}) as Promise<Node[]>[]
 		const node_a1 = await Promise.all(promise_a1)
