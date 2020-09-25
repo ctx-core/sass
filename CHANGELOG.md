@@ -1,5 +1,13 @@
 # @ctx-core/sass
 
+## 8.0.24
+
+### Patch Changes
+
+- Downgrade postcss to ^7.0.34 to fix compatability with svelte-preprocess
+
+  See https://github.com/sveltejs/svelte-preprocess/issues/258
+
 ## 8.0.23
 
 ### Patch Changes
