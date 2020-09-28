@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.29
+
+### Patch Changes
+
+- domutils: ^2.4.0 -> ^2.4.1
+
 ## 8.0.28
 
 ### Patch Changes
