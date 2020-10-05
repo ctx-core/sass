@@ -1,5 +1,13 @@
 # @ctx-core/sass
 
+## 8.0.30
+
+### Patch Changes
+
+- domhandler: ^3.2.0 -> ^3.3.0
+- htmlparser2: ^4.1.0 -> ^5.0.0
+- domutils: ^2.4.1 -> ^2.4.2
+
 ## 8.0.29
 
 ### Patch Changes
