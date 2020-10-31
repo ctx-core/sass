@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.33
+
+### Patch Changes
+
+- node-sass: ^4.14.1 -> ^5.0.0
+
 ## 8.0.32
 
 ### Patch Changes
