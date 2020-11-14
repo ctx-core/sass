@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "8.0.33",
+	"version": "8.0.34",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -32,7 +32,7 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^19.0.21",
+		"@ctx-core/array": "workspace:^19.0.22",
 		"@ctx-core/string": "workspace:^5.0.2",
 		"cheerio": "^1.0.0-rc.3",
 		"domelementtype": "~2.0.2",
