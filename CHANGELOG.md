@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.0.36
+
+### Patch Changes
+
+- @ctx-core/array@19.0.24
+
 ## 8.0.35
 
 ### Patch Changes
