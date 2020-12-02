@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "8.0.39",
+	"version": "8.0.40",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -35,8 +35,8 @@
 		"@ctx-core/array": "workspace:^19.1.2",
 		"@ctx-core/string": "workspace:^5.0.3",
 		"cheerio": "^1.0.0-rc.3",
-		"domelementtype": "~2.0.2",
-		"domhandler": "^3.3.0",
+		"domelementtype": "2.1.0",
+		"domhandler": "^4.0.0",
 		"domutils": "^2.4.2",
 		"htmlparser2": "^5.0.1",
 		"node-sass": "^5.0.0",
