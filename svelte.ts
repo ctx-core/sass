@@ -145,12 +145,16 @@ export function _sass_markup(builder_opts:builder_opts_type = {}) {
 export const _markup__sass = _sass_markup
 export function _preprocess_sass(builder_opts:builder_opts_type = {}) {
 	const style = _sass_style(builder_opts)
+	if (!builder_opts.preprocess_markup) {
+		return { style }
+	}
 	const markup = _sass_markup(builder_opts)
 	return { style, markup }
 }
 export const _preprocess__sass = _preprocess_sass
 type builder_opts_type = {
 	postcss_plugins?:AcceptedPlugin[],
+	preprocess_markup?:boolean,
 	functions?:any,
 }
 type Plugin_Output = { code:string, map:string }

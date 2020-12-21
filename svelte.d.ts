@@ -24,6 +24,9 @@ export declare function _sass_markup(builder_opts?: builder_opts_type): (opts: o
 export declare const _markup__sass: typeof _sass_markup;
 export declare function _preprocess_sass(builder_opts?: builder_opts_type): {
     style: (opts: opts_type) => Promise<Plugin_Output> | undefined;
+    markup?: undefined;
+} | {
+    style: (opts: opts_type) => Promise<Plugin_Output> | undefined;
     markup: (opts: opts_type) => Promise<{
         code: string;
         map: null;
@@ -32,6 +35,7 @@ export declare function _preprocess_sass(builder_opts?: builder_opts_type): {
 export declare const _preprocess__sass: typeof _preprocess_sass;
 declare type builder_opts_type = {
     postcss_plugins?: AcceptedPlugin[];
+    preprocess_markup?: boolean;
     functions?: any;
 };
 declare type Plugin_Output = {

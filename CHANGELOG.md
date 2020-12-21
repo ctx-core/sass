@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.1.0
+
+### Minor Changes
+
+- feat: \_preprocess_sass: + build_opts_type.preprocess_markup
+
 ## 8.0.51
 
 ### Patch Changes
