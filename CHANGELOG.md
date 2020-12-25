@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 8.1.2
+
+### Patch Changes
+
+- - .rush
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.1.13
+  - @ctx-core/string@5.0.5
+
 ## 8.1.1
 
 ### Patch Changes
