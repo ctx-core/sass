@@ -34,7 +34,7 @@
 	"dependencies": {
 		"@ctx-core/array": "workspace:^19.2.2",
 		"@ctx-core/string": "workspace:^5.0.5",
-		"cheerio": "^1.0.0-rc.5",
+		"cheerio": "github:cheeriojs/cheerio#main",
 		"domelementtype": "2.1.0",
 		"domhandler": "^4.0.0",
 		"domutils": "^2.4.4",
