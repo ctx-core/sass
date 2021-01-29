@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 8.1.15
+
+### Patch Changes
+
+- cheerio: github:cheeriojs/cheerio#main
+
 ## 8.1.14
 
 ### Patch Changes
