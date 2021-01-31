@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "8.1.18",
+	"version": "9.0.0",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -18,9 +18,9 @@
 	},
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
-	"main": "./index.js",
-	"module": "./index.js",
-	"types": "./index.ts",
+	"main": "./src/index.js",
+	"module": "./src/index.js",
+	"types": "./src/index.ts",
 	"bin": {
 		"npm-rebuild-node-sass.sh": "bin/npm-rebuild-node-sass.sh"
 	},
@@ -32,8 +32,8 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^19.2.5",
-		"@ctx-core/string": "workspace:^5.0.5",
+		"@ctx-core/array": "workspace:^20.0.0",
+		"@ctx-core/string": "workspace:^6.0.0",
 		"cheerio": "github:cheeriojs/cheerio#main",
 		"domelementtype": "2.1.0",
 		"domhandler": "^4.0.0",

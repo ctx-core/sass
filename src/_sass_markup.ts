@@ -1,0 +1,52 @@
+import { parseDOM } from 'htmlparser2'
+import type { Element } from 'domhandler/lib/node'
+import { Tag } from 'domelementtype'
+import cheerio from 'cheerio'
+import { _a1_present, compact, flatten } from '@ctx-core/array'
+import { getOuterHTML } from 'domutils/lib/stringify'
+import type { opts_type } from './opts_type'
+import type { builder_opts_type } from './builder_opts_type'
+import { render_sass } from './render_sass'
+export function _sass_markup(builder_opts:builder_opts_type = {}) {
+	return async (opts:opts_type)=>{
+		const { filename, content, attributes, } = opts
+		const dom = parseDOM(content, {
+			lowerCaseTags: false,
+			lowerCaseAttributeNames: false,
+		})
+		const promise_a1 = dom.map(async in_node=>{
+			const node = in_node as Element
+			if (
+				node.type.toString() === Tag.toString()
+				&& node.name == 'svelte:head'
+			) {
+				const $ = cheerio.load(node)
+				const style_node_a1 = $(`style[type='text/sass'], style[type='text/scss']`).get()
+				const promise_a1 = style_node_a1.map(async style_node=>{
+					const text_node = style_node.firstChild
+					const { data } = text_node
+					const { code } = await render_sass(builder_opts, {
+						filename,
+						content: data,
+						attributes,
+					})
+					style_node.attribs.type = 'text/css'
+					delete style_node.attribs.global
+					text_node.data = code
+					return style_node
+				})
+				return Promise.all(promise_a1)
+			}
+		}) as Promise<Node[]>[]
+		const node_a1 = await Promise.all(promise_a1)
+		if (_a1_present(flatten(compact(node_a1)))) {
+			return {
+				code: getOuterHTML(dom),
+				map: null,
+			}
+		}
+	}
+}
+export {
+	_sass_markup as _markup__sass
+}

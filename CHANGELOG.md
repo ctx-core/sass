@@ -1,5 +1,17 @@
 # @ctx-core/sass
 
+## 9.0.0
+
+### Major Changes
+
+- src directory
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.0.0
+  - @ctx-core/string@6.0.0
+
 ## 8.1.18
 
 ### Patch Changes
