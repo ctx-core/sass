@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.0.3
+
+### Patch Changes
+
+- fix: \_preprocess_sass: type issues
+
 ## 9.0.2
 
 ### Patch Changes
