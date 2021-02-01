@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.1.0
+
+### Minor Changes
+
+- sass instead of node-sass
+
 ## 9.0.3
 
 ### Patch Changes

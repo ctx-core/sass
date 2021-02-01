@@ -1,4 +1,4 @@
-import sass from 'node-sass'
+import sass from 'sass'
 import package_importer from 'node-sass-package-importer'
 import postcss, { AcceptedPlugin } from 'postcss'
 import type { opts_type } from './opts_type'
@@ -33,7 +33,7 @@ export async function render_sass(
 				: ast.toResult().css
 			fulfil({
 				code: postcss_result,
-				map: result.map.toString()
+				map: result.toString()
 			})
 		})
 	})
