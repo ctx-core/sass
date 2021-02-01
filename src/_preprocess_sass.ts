@@ -9,4 +9,8 @@ export function _preprocess_sass(builder_opts:builder_opts_type = {}) {
 	const markup = _sass_markup(builder_opts)
 	return { style, markup }
 }
+export interface preprocess_sass_type {
+	style:string
+	markup:string
+}
 export { _preprocess_sass as _preprocess__sass}

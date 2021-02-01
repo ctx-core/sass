@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.0.2
+
+### Patch Changes
+
+- fix: types to fix build issues
+
 ## 9.0.1
 
 ### Patch Changes
