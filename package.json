@@ -30,7 +30,7 @@
 	},
 	"dependencies": {
 		"@ctx-core/array": "workspace:^20.1.11",
-		"@ctx-core/string": "workspace:^6.1.11",
+		"@ctx-core/string": "workspace:^6.1.12",
 		"cheerio": "github:cheeriojs/cheerio#main",
 		"domelementtype": "2.1.0",
 		"domhandler": "^4.0.0",
