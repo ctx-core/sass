@@ -1,13 +1,14 @@
-import type { opts_type } from './opts_type'
+import type { opts_I } from './opts_I'
 /**
  * Builder Function that returns a sass_style preprocessor for Svelte.
  */
-export function _sass_style():sass_style_type {
-	return function sass_style(opts:opts_type) {
+export function _sass_style():sass_style_T {
+	return function sass_style(opts:opts_I) {
 		const { attributes } = opts
 		const { type } = attributes
 		if (type !== 'text/scss' && type !== 'text/sass') return
 	}
 }
-export type sass_style_type = (opts:opts_type) => void
+export type sass_style_T = (opts:opts_I) => void
+export type sass_style_type = sass_style_T
 export { _sass_style as _style__sass }

@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.2.0
+
+### Minor Changes
+
+- \*\_T type names
+
 ## 9.1.19
 
 ### Patch Changes

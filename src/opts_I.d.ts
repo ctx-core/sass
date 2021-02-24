@@ -1,4 +1,4 @@
-export interface opts_type {
+export interface opts_I {
     filename: string;
     content: string;
     attributes: {
@@ -6,3 +6,4 @@ export interface opts_type {
         global?: any;
     };
 }
+export declare type optsI = opts_I;

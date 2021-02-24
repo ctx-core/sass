@@ -1,11 +1,11 @@
 import sass from 'sass'
 import package_importer from 'node-sass-package-importer'
 import postcss, { AcceptedPlugin } from 'postcss'
-import type { opts_type } from './opts_type'
-import type { builder_opts_type } from './builder_opts_type'
+import type { opts_I } from './opts_I'
+import type { builder_opts_I } from './builder_opts_I'
 import { globalize } from './globalize'
 export async function render_sass(
-	builder_opts:builder_opts_type, opts:opts_type
+	builder_opts:builder_opts_I, opts:opts_I
 ):Promise<Plugin_Output> {
 	const { postcss_plugins = [] as AcceptedPlugin[] } = builder_opts
 	const { filename, content, attributes } = opts
