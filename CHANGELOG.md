@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.2.1
+
+### Patch Changes
+
+- fix: \_sass_markup: types: dom-serializer instead of dom-utils
+
 ## 9.2.0
 
 ### Minor Changes
