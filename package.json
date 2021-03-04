@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "9.2.4",
+	"version": "9.2.5",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -29,7 +29,7 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^20.1.15",
+		"@ctx-core/array": "workspace:^20.1.16",
 		"@ctx-core/string": "workspace:^6.1.14",
 		"cheerio": "github:cheeriojs/cheerio#main",
 		"dom-serializer": "^1.2.0",
