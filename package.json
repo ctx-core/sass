@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "9.2.11",
+	"version": "9.2.12",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -24,13 +24,13 @@
 	"scripts": {
 		"build": "npm run clean && npm run compile",
 		"clean": "rm -f tsconfig.tsbuildinfo",
-		"compile": "./node_modules/.bin/tsc -b",
+		"compile": "./node_modules/.bin/tsc -b .",
 		"exec": "$@",
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^20.2.0",
-		"@ctx-core/string": "workspace:^6.1.15",
+		"@ctx-core/array": "workspace:^20.2.1",
+		"@ctx-core/string": "workspace:^6.1.16",
 		"cheerio": "github:cheeriojs/cheerio#main",
 		"dom-serializer": "^1.2.0",
 		"domelementtype": "2.1.0",

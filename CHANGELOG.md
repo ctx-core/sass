@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.2.12
+
+### Patch Changes
+
+- fix: npm run compile: tsc -b .
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.1
+  - @ctx-core/string@6.1.16
+
 ## 9.2.11
 
 ### Patch Changes
