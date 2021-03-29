@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.2.13
+
+### Patch Changes
+
+- fix: npm publish: https://github.com/npm/cli/issues/2834
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.2
+  - @ctx-core/string@6.1.17
+
 ## 9.2.12
 
 ### Patch Changes
