@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.2.15
+
+### Patch Changes
+
+- "svelte": 3.37.0
+
 ## 9.2.14
 
 ### Patch Changes
