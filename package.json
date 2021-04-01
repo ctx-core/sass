@@ -33,7 +33,7 @@
 		"@ctx-core/string": "workspace:^6.1.18",
 		"cheerio": "github:cheeriojs/cheerio#main",
 		"dom-serializer": "^1.2.0",
-		"domelementtype": "2.1.0",
+		"domelementtype": "2.2.0",
 		"domhandler": "^4.1.0",
 		"entities": "^2.2.0",
 		"htmlparser2": "^6.0.1",
