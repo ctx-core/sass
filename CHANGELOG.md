@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.2.16
+
+### Patch Changes
+
+- typescript: ^4.2.3 -> ^4.2.4
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.4
+  - @ctx-core/string@6.1.19
+
 ## 9.2.15
 
 ### Patch Changes
