@@ -1,5 +1,12 @@
 # @ctx-core/sass
 
+## 9.2.17
+
+### Patch Changes
+
+- dom-serializer: ^1.2.0 -> ^1.3.1
+- htmlparser2: ^6.0.1 -> ^6.1.0
+
 ## 9.2.16
 
 ### Patch Changes
