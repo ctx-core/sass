@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.2.20
+
+### Patch Changes
+
+- domhandler: ^4.1.0 -> ^4.2.0
+
 ## 9.2.19
 
 ### Patch Changes
