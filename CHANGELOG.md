@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 9.2.28
+
+### Patch Changes
+
+- "cheerio": "1.0.0-rc.9"
+
 ## 9.2.27
 
 ### Patch Changes
