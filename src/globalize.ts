@@ -1,10 +1,11 @@
+import type { ContainerBase, Rule } from 'postcss'
 import { splice_str } from '@ctx-core/string'
-import { maybe_each } from '@ctx-core/array'
 /**
  * Takes a postcss ast & wraps each selector with the `:global()` svelte css directive.
  */
-export function globalize(ast) {
-	let selector = '' + (ast.selector || '')
+export function globalize<Ast extends ContainerBase>(ast:Ast) {
+	const ast_rule = ast as unknown as Rule
+	let selector = '' + (ast_rule.selector || '')
 	if (selector) {
 		const splice_arg_a2 = [] as number[][]
 		const selector_length = selector.length
@@ -31,9 +32,8 @@ export function globalize(ast) {
 			selector = splice_str(selector, ...splice_arg_a1)
 		}
 //		selector.split(/[\s+[>\+\~]\s*]/)
-		ast.selector = `:global(${selector})`
+		ast_rule.selector = `:global(${selector})`
 //		ast.selector = `:global(${selector.replace(/:global\((.*)\)/g, '$1')})`
 	}
-	maybe_each(ast.nodes, globalize)
 	return ast
 }

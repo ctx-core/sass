@@ -1,5 +1,17 @@
 # @ctx-core/sass
 
+## 9.3.0
+
+### Minor Changes
+
+- "noImplicitAny": true
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.3.0
+  - @ctx-core/string@6.2.0
+
 ## 9.2.34
 
 ### Patch Changes
