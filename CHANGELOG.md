@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.3.4
+
+### Patch Changes
+
+- .npmignore: + ~
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.3.2
+  - @ctx-core/string@6.2.4
+
 ## 9.3.3
 
 ### Patch Changes
