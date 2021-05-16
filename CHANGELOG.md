@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.3.1
+
+### Patch Changes
+
+- fix: target: 2018: nodejs compatability
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.3.1
+  - @ctx-core/string@6.2.1
+
 ## 9.3.0
 
 ### Minor Changes
