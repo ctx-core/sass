@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.4.1
+
+### Patch Changes
+
+- .gitignore: - \*.js
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.4.1
+  - @ctx-core/string@6.3.1
+
 ## 9.4.0
 
 ### Minor Changes
