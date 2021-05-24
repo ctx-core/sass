@@ -1,5 +1,17 @@
 # @ctx-core/sass
 
+## 9.4.0
+
+### Minor Changes
+
+- dist,types directory: addressing typescript build issues
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.4.0
+  - @ctx-core/string@6.3.0
+
 ## 9.3.8
 
 ### Patch Changes
