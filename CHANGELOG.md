@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 9.3.8
+
+### Patch Changes
+
+- types: ./src/index.d.ts: address error TS2742 issue
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.3.10
+  - @ctx-core/string@6.2.5
+
 ## 9.3.7
 
 ### Patch Changes
