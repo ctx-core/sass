@@ -38,7 +38,8 @@ export function _sass_markup(builder_opts:builder_opts_I = {}):sass_markup_type 
 				})
 				return Promise.all(promise_a1)
 			}
-		}) as Promise<Element[]>[]
+			return node
+		}) as Promise<Element[]|Element>[]
 		const node_a1 = await Promise.all(promise_a1)
 		if (_a1_present(flatten(compact(node_a1)))) {
 			return {

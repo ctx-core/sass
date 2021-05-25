@@ -1,5 +1,17 @@
 # @ctx-core/sass
 
+## 9.5.0
+
+### Minor Changes
+
+- fix tsc build directory issues
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.5.0
+  - @ctx-core/string@6.4.0
+
 ## 9.4.2
 
 ### Patch Changes
