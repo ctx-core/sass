@@ -1,5 +1,13 @@
 # @ctx-core/sass
 
+## 9.5.1
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/string@6.4.1
+
 ## 9.5.0
 
 ### Minor Changes
