@@ -2,28 +2,28 @@ import { parseDocument } from 'htmlparser2'
 import type { Element } from 'domhandler/lib/node'
 import { Tag } from 'domelementtype'
 import cheerio from 'cheerio'
-import { _a1_present, compact, flatten } from '@ctx-core/array'
+import { a_present_, compact, flatten } from '@ctx-core/array'
 import serialize from 'dom-serializer'
 import type { opts_I } from './opts_I'
 import type { builder_opts_I } from './builder_opts_I'
 import { render_sass } from './render_sass'
-export function _sass_markup(builder_opts:builder_opts_I = {}):sass_markup_type {
-	return sass_markup as sass_markup_type
+export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
+	return sass_markup as sass_markup_T
 	async function sass_markup(opts:opts_I) {
 		const { filename, content, attributes, } = opts
 		const dom = parseDocument(content, {
 			lowerCaseTags: false,
 			lowerCaseAttributeNames: false,
 		})
-		const promise_a1 = dom.children.map(async in_node=>{
+		const promise_a = dom.children.map(async in_node=>{
 			const node = in_node as Element
 			if (
 				node.type.toString() === Tag.toString()
 				&& node.name == 'svelte:head'
 			) {
 				const $ = cheerio.load(node)
-				const style_node_a1 = $(`style[type='text/sass'], style[type='text/scss']`).get()
-				const promise_a1 = style_node_a1.map(async style_node=>{
+				const style_node_a = $(`style[type='text/sass'], style[type='text/scss']`).get()
+				const promise_a = style_node_a.map(async style_node=>{
 					const content = serialize(style_node.childNodes)
 					const { code } = await render_sass(builder_opts, {
 						filename,
@@ -36,12 +36,12 @@ export function _sass_markup(builder_opts:builder_opts_I = {}):sass_markup_type 
 					// text_node.data = code
 					return style_node
 				})
-				return Promise.all(promise_a1)
+				return Promise.all(promise_a)
 			}
 			return node
 		}) as Promise<Element[]|Element>[]
-		const node_a1 = await Promise.all(promise_a1)
-		if (_a1_present(flatten(compact(node_a1)))) {
+		const node_a = await Promise.all(promise_a)
+		if (a_present_(flatten(compact(node_a)))) {
 			return {
 				code: serialize(dom),
 				map: null,
@@ -49,11 +49,12 @@ export function _sass_markup(builder_opts:builder_opts_I = {}):sass_markup_type 
 		}
 	}
 }
-export interface sass_markup_fn_return_type {
+export interface sass_markup_return_T {
 	code:string
 	map:null
 }
-export type sass_markup_type = (opts:opts_I)=>Promise<sass_markup_fn_return_type>
+export type sass_markup_T = (opts:opts_I)=>Promise<sass_markup_return_T>
 export {
-	_sass_markup as _markup__sass
+	sass_markup_ as _sass_markup,
+	sass_markup_ as _markup__sass,
 }

@@ -1,5 +1,19 @@
 # @ctx-core/sass
 
+## 10.0.0
+
+### Major Changes
+
+- \$ suffix for stores
+- \_ suffix for factory functions
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/array@21.0.0
+  - @ctx-core/string@7.0.0
+
 ## 9.5.1
 
 ### Patch Changes
