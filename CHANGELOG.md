@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 10.0.2
+
+### Patch Changes
+
+- update dependencies
+
 ## 10.0.1
 
 ### Patch Changes
