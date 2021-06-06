@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 10.0.11
+
+### Patch Changes
+
+- fix: build: clean up old build files in dist
+- Updated dependencies [undefined]
+  - @ctx-core/array@21.2.6
+  - @ctx-core/string@7.0.4
+
 ## 10.0.10
 
 ### Patch Changes
