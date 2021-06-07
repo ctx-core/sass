@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 10.0.12
+
+### Patch Changes
+
+- version bump: run build
+- Updated dependencies [undefined]
+  - @ctx-core/array@21.2.7
+  - @ctx-core/string@7.0.5
+
 ## 10.0.11
 
 ### Patch Changes
