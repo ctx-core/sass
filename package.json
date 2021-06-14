@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "10.0.18",
+	"version": "11.0.0",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -18,9 +18,9 @@
 	},
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
-	"main": "./dist/index.js",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"main": "./src/index.js",
+	"module": "./src/index.js",
+	"types": "./src/index.d.ts",
 	"scripts": {
 		"build": "npm run clean && npm run compile",
 		"clean": "rm -f tsconfig.tsbuildinfo && rm -f dist/**/*.js && rm -f dist/**/*.d.ts && rm -f dist/**/*.map",
@@ -29,8 +29,8 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^21.3.3",
-		"@ctx-core/string": "workspace:^7.0.5",
+		"@ctx-core/array": "workspace:^22.0.0",
+		"@ctx-core/string": "workspace:^8.0.0",
 		"cheerio": "1.0.0-rc.9",
 		"dom-serializer": "^1.3.2",
 		"domelementtype": "2.2.0",

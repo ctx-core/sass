@@ -28,8 +28,8 @@ export function globalize<Ast extends ContainerBase>(ast:Ast) {
 			splice_arg_a2.push([idx - 1, 1])
 		} while (idx !== -1 && idx < selector_length)
 		for (let i = splice_arg_a2.length - 1; i >= 0; i -= 1) {
-			const splice_arg_a1 = splice_arg_a2[i]
-			selector = splice_str(selector, ...splice_arg_a1)
+			const splice_arg_a = splice_arg_a2[i]
+			selector = splice_str(selector, ...splice_arg_a)
 		}
 //		selector.split(/[\s+[>\+\~]\s*]/)
 		ast_rule.selector = `:global(${selector})`
