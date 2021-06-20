@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 11.0.10
+
+### Patch Changes
+
+- fix: deploying \*.js files
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.8
+  - @ctx-core/string@8.0.7
+
 ## 11.0.9
 
 ### Patch Changes
