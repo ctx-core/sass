@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 11.0.7
+
+### Patch Changes
+
+- fix: npm run clean
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.5
+  - @ctx-core/string@8.0.4
+
 ## 11.0.6
 
 ### Patch Changes
