@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 11.0.8
+
+### Patch Changes
+
+- npm run prepare instead of npm run prepublishOnly
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.6
+  - @ctx-core/string@8.0.5
+
 ## 11.0.7
 
 ### Patch Changes
