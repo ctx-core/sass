@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 11.0.12
+
+### Patch Changes
+
+- tsconfig.json: "lib": ["dom", "ESNext"]
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.11
+  - @ctx-core/string@8.0.9
+
 ## 11.0.11
 
 ### Patch Changes

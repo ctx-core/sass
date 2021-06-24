@@ -47,6 +47,7 @@ export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
 				map: null,
 			}
 		}
+		return
 	}
 }
 export interface sass_markup_return_T {
