@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 11.0.15
+
+### Patch Changes
+
+- dist directory
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.16
+  - @ctx-core/string@8.0.11
+
 ## 11.0.14
 
 ### Patch Changes
