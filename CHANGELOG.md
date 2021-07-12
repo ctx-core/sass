@@ -1,5 +1,16 @@
 # @ctx-core/sass
 
+## 11.1.0
+
+### Minor Changes
+
+- aa instead of a2,aaa instead of a3
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.3.0
+
 ## 11.0.20
 
 ### Patch Changes
