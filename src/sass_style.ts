@@ -1,4 +1,4 @@
-import { sass_style_, sass_style_T } from './sass_style_'
+import { sass_style_, sass_style_T } from './sass_style_.js'
 /**
  * Default sass_style preprocessor for Svelte.
  * @param opts.filename

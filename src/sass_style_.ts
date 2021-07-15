@@ -1,4 +1,4 @@
-import type { opts_I } from './opts_I'
+import type { opts_I } from './opts_I.js'
 /**
  * Builder Function that returns a sass_style preprocessor for Svelte.
  */

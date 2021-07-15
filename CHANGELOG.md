@@ -1,5 +1,16 @@
 # @ctx-core/sass
 
+## 12.0.1
+
+### Patch Changes
+
+- 2a6971f80: fix: "type": "module"
+- fix: "type": "module"
+- Updated dependencies [2a6971f80]
+- Updated dependencies [undefined]
+  - @ctx-core/array@23.0.1
+  - @ctx-core/string@9.0.1
+
 ## 12.0.0
 
 ### Major Changes

@@ -4,9 +4,9 @@ import { Tag } from 'domelementtype'
 import cheerio from 'cheerio'
 import { a_present_, compact, flatten } from '@ctx-core/array'
 import serialize from 'dom-serializer'
-import type { opts_I } from './opts_I'
-import type { builder_opts_I } from './builder_opts_I'
-import { render_sass } from './render_sass'
+import type { opts_I } from './opts_I.js'
+import type { builder_opts_I } from './builder_opts_I.js'
+import { render_sass } from './render_sass.js'
 export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
 	return sass_markup as sass_markup_T
 	async function sass_markup(opts:opts_I) {
