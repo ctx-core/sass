@@ -1,5 +1,23 @@
 # @ctx-core/sass
 
+## 12.0.9
+
+### Patch Changes
+
+- fix: sourceMappingURL: "mapRoot": ""
+- Updated dependencies [undefined]
+  - @ctx-core/array@23.0.11
+  - @ctx-core/string@9.0.9
+
+## 12.0.8
+
+### Patch Changes
+
+- tsconfig.json: "target": "es2019"
+- Updated dependencies [undefined]
+  - @ctx-core/array@23.0.10
+  - @ctx-core/string@9.0.8
+
 ## 12.0.7
 
 ### Patch Changes
