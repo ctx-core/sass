@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.0.4
+
+### Patch Changes
+
+- back to esm module with cjs using esm npm package to load library
+- Updated dependencies [undefined]
+  - @ctx-core/array@23.0.6
+  - @ctx-core/string@9.0.4
+
 ## 12.0.3
 
 ### Patch Changes
