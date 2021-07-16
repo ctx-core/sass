@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.0.3
+
+### Patch Changes
+
+- support cjs & esm: + "exports"
+- Updated dependencies [undefined]
+  - @ctx-core/array@23.0.3
+  - @ctx-core/string@9.0.3
+
 ## 12.0.2
 
 ### Patch Changes
