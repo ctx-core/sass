@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.0.10
+
+### Patch Changes
+
+- exports: + "package.json": "./package.json"
+- Updated dependencies [undefined]
+  - @ctx-core/array@23.0.12
+  - @ctx-core/string@9.0.10
+
 ## 12.0.9
 
 ### Patch Changes
