@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.0.20
+
+### Patch Changes
+
+- htmlparser2: ^6.1.0 -> ^7.0.0
+
 ## 12.0.19
 
 ### Patch Changes
