@@ -1,5 +1,12 @@
 # @ctx-core/sass
 
+## 12.0.25
+
+### Patch Changes
+
+- htmlparser2: ^7.1.0 -> ^7.1.1
+- domhandler: ^4.2.0 -> ^4.2.2
+
 ## 12.0.24
 
 ### Patch Changes
