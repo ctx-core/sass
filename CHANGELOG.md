@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.1.0
+
+### Minor Changes
+
+- sass*preprocess* from preprocess*sass*
+
 ## 12.0.41
 
 ### Patch Changes
