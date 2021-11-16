@@ -1,6 +1,6 @@
 import type { builder_opts_I } from './builder_opts_I.js'
-import { sass_style_, sass_style_T } from './sass_style_.js'
 import { sass_markup_, sass_markup_T } from './sass_markup_.js'
+import { sass_style_, sass_style_T } from './sass_style_.js'
 export function sass_preprocess_(builder_opts:builder_opts_I = {}):sass_preprocess_I {
 	const style = sass_style_()
 	if (!builder_opts.preprocess_markup) {
