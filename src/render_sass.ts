@@ -1,6 +1,6 @@
-import sass from 'sass'
 import package_importer from 'node-sass-package-importer'
 import postcss, { AcceptedPlugin } from 'postcss'
+import sass from 'sass'
 import type { builder_opts_I } from './builder_opts_I.js'
 import { globalize } from './globalize.js'
 import type { opts_I } from './opts_I.js'
