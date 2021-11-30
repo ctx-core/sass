@@ -1,5 +1,27 @@
 # @ctx-core/sass
 
+## 12.1.3
+
+### Patch Changes
+
+- @types/sass: ^1.43.0 -> ^1.43.1
+- @swc/cli: ^0.1.51 -> ^0.1.52
+- @swc/core: ^1.2.111 -> ^1.2.113
+- sass: ^1.43.4 -> ^1.43.5
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/array@23.0.27
+  - @ctx-core/string@9.0.25
+
+## 12.1.2
+
+### Patch Changes
+
+- @swc/core: ^1.2.110 -> ^1.2.111
+- Updated dependencies
+  - @ctx-core/array@23.0.26
+  - @ctx-core/string@9.0.24
+
 ## 12.1.1
 
 ### Patch Changes
