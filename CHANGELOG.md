@@ -1,5 +1,16 @@
 # @ctx-core/sass
 
+## 12.1.4
+
+### Patch Changes
+
+- @swc/core: ^1.2.113 -> ^1.2.116
+- sass: ^1.43.5 -> ^1.44.0
+- domhandler: ^4.2.2 -> ^4.3.0
+- Updated dependencies
+  - @ctx-core/array@23.0.28
+  - @ctx-core/string@9.0.26
+
 ## 12.1.3
 
 ### Patch Changes
