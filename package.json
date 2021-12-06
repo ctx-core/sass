@@ -37,8 +37,8 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^23.0.30",
-		"@ctx-core/string": "workspace:^9.0.28",
+		"@ctx-core/array": "workspace:^23.0.31",
+		"@ctx-core/string": "workspace:^9.0.29",
 		"@swc/cli": "^0.1.52",
 		"@swc/core": "^1.2.118",
 		"cheerio": "1.0.0-rc.9",
