@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.6",
+	"version": "12.1.7",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -19,7 +19,6 @@
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
 	"type": "module",
-	"main": "./dist/index.js",
 	"module": "./dist/index.js",
 	"types": "./src/index.ts",
 	"exports": {
@@ -37,8 +36,8 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^23.0.31",
-		"@ctx-core/string": "workspace:^9.0.29",
+		"@ctx-core/array": "workspace:^23.0.32",
+		"@ctx-core/string": "workspace:^9.0.30",
 		"@swc/cli": "^0.1.52",
 		"@swc/core": "^1.2.118",
 		"cheerio": "1.0.0-rc.9",

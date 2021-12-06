@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.1.7
+
+### Patch Changes
+
+- package.json: - "main": explicitly not support cjs
+- Updated dependencies
+  - @ctx-core/array@23.0.32
+  - @ctx-core/string@9.0.30
+
 ## 12.1.6
 
 ### Patch Changes
