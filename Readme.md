@@ -46,7 +46,7 @@ module.exports = {
 	<div class="my-global-class">✔</div>
 </div>
 
-<style type="text/scss" global>
+<style lang="scss" global>
 	.container {
 		.my-global-class {
 			color: green;
