@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.1.9
+
+### Patch Changes
+
+- package.json: svelte: ./dist/index.js
+- Updated dependencies
+  - @ctx-core/array@23.0.34
+  - @ctx-core/string@9.0.32
+
 ## 12.1.8
 
 ### Patch Changes
