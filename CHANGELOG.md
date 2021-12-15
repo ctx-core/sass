@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.1.12
+
+### Patch Changes
+
+- \*.d.ts export
+- Updated dependencies
+  - @ctx-core/array@23.0.37
+  - @ctx-core/string@9.0.35
+
 ## 12.1.11
 
 ### Patch Changes
