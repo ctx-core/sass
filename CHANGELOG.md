@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.1.15
+
+### Patch Changes
+
+- tsconfig.json: "target": "ES2021"
+- Updated dependencies
+  - @ctx-core/array@23.0.40
+  - @ctx-core/string@9.0.38
+
 ## 12.1.14
 
 ### Patch Changes
