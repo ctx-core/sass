@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.1.14
+
+### Patch Changes
+
+- package.json: "types": "./src/index.ts": better editing experience
+- Updated dependencies
+  - @ctx-core/array@23.0.39
+  - @ctx-core/string@9.0.37
+
 ## 12.1.13
 
 ### Patch Changes
