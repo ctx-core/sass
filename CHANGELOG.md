@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.1.16
+
+### Patch Changes
+
+- fix: error TS6059: \* is not under 'rootDir': package.json: types: ./dist/index.d.ts
+- Updated dependencies
+  - @ctx-core/array@23.0.41
+  - @ctx-core/string@9.0.39
+
 ## 12.1.15
 
 ### Patch Changes
