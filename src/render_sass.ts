@@ -22,7 +22,7 @@ export async function render_sass(
 				console.trace(`Error in\n${filename}: ${err}`)
 				return reject(err)
 			}
-			const css = result.css.toString()
+			const css = result!.css.toString()
 			let ast = postcss.parse(css)
 			if (attributes?.global) ast = globalize(ast)
 			const postcss_result =
@@ -33,7 +33,7 @@ export async function render_sass(
 				: ast.toResult().css
 			fulfil({
 				code: postcss_result,
-				map: result.toString()
+				map: result!.toString()
 			})
 		})
 	})
