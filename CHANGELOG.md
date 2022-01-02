@@ -1,5 +1,13 @@
 # @ctx-core/sass
 
+## 12.1.19
+
+### Patch Changes
+
+- .js + .d.ts instead of .ts
+- Updated dependencies
+  - @ctx-core/string@9.0.40
+
 ## 12.1.18
 
 ### Patch Changes

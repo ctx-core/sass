@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.18",
+	"version": "12.1.19",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -29,7 +29,7 @@
 	"scripts": {
 		"build": "npm run compile",
 		"clean": "rimraf lib && npm run clean:tsbuildinfo",
-		"clean:tsbuildinfo": "rm -f tsconfig.tsbuildinfo && rm -f lib/**/*.d.ts",
+		"clean:tsbuildinfo": "rimraf tsconfig.tsbuildinfo && rimraf lib/**/*.d.ts",
 		"compile": "npm run compile:source && npm run compile:declaration",
 		"compile:source": "swc src --out-dir lib --copy-files --source-maps --config-file .swcrc",
 		"compile:declaration": "npm run clean:tsbuildinfo && tsc --declaration --emitDeclarationOnly --declarationDir lib",
@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@ctx-core/array": "workspace:^23.1.0",
-		"@ctx-core/string": "workspace:^9.0.39",
+		"@ctx-core/string": "workspace:^9.0.40",
 		"@swc/cli": "^0.1.55",
 		"@swc/core": "^1.2.124",
 		"cheerio": "1.0.0-rc.9",
