@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.27",
+	"version": "12.1.28",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -37,8 +37,8 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^24.0.1",
-		"@ctx-core/string": "^10.0.0",
+		"@ctx-core/array": "workspace:*",
+		"@ctx-core/string": "workspace:^10.0.1",
 		"@swc/cli": "^0.1.55",
 		"@swc/core": "^1.2.136",
 		"cheerio": "1.0.0-rc.9",
