@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"@ctx-core/array": "*",
-		"@ctx-core/string": "^10.0.1",
+		"@ctx-core/string": "^10.0.2",
 		"@swc/cli": "^0.1.55",
 		"@swc/core": "^1.2.147",
 		"cheerio": "1.0.0-rc.9",
