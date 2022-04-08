@@ -16,10 +16,10 @@ export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
 			lowerCaseAttributeNames: false,
 		})
 		const promise_a = dom.children.map(async in_node=>{
-			const node = in_node as Element
+			const node = in_node
 			if (
 				node.type.toString() === Tag.toString()
-				&& node.name == 'svelte:head'
+				&& (node as Element).name == 'svelte:head'
 			) {
 				const $ = cheerio.load(node)
 				const style_node_a = $(`style[type='text/sass'], style[type='text/scss']`).get()
