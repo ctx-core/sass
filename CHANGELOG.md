@@ -1,5 +1,13 @@
 # @ctx-core/sass
 
+## 12.1.31
+
+### Patch Changes
+
+- domhandler: ^4.3.1 -> ^5.0.1
+- domelementtype: 2.2.0 -> 2.3.0
+- entities: ^4.1.1 -> ^4.2.0
+
 ## 12.1.30
 
 ### Patch Changes
