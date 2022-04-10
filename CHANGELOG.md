@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.1.32
+
+### Patch Changes
+
+- dom-serializer: ^1.3.2 -> ^2.0.0
+
 ## 12.1.31
 
 ### Patch Changes
