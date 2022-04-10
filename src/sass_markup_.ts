@@ -1,7 +1,7 @@
 import cheerio from 'cheerio'
 import serialize from 'dom-serializer'
 import { Tag } from 'domelementtype'
-import type { Element } from 'domhandler/lib/node'
+import type { AnyNode, Element } from 'domhandler/lib/node'
 import { parseDocument } from 'htmlparser2'
 import { a_present_, compact, flatten } from '@ctx-core/array'
 import type { builder_opts_I } from './builder_opts_I.js'
@@ -24,7 +24,7 @@ export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
 				const $ = cheerio.load(node)
 				const style_node_a = $(`style[type='text/sass'], style[type='text/scss']`).get()
 				const promise_a = style_node_a.map(async style_node=>{
-					const content = serialize(style_node.childNodes)
+					const content = serialize(style_node.childNodes as any)
 					const { code } = await render_sass(builder_opts, {
 						filename,
 						content,
@@ -43,7 +43,7 @@ export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
 		const node_a = await Promise.all(promise_a)
 		if (a_present_(flatten(compact(node_a)))) {
 			return {
-				code: serialize(dom),
+				code: serialize(dom as AnyNode),
 				map: null,
 			}
 		}
