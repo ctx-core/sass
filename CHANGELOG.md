@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.1.33
+
+### Patch Changes
+
+- entities: ^4.2.0 -> ^4.3.0
+
 ## 12.1.32
 
 ### Patch Changes
