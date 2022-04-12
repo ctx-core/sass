@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.33",
+	"version": "12.1.34",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -21,9 +21,7 @@
 	"type": "module",
 	"types": "./lib/index.d.ts",
 	"exports": {
-		".": {
-			"import": "./lib/index.js"
-		},
+		".": "./lib/index.js",
 		"./package.json": "./package.json"
 	},
 	"scripts": {
@@ -37,8 +35,8 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "*",
-		"@ctx-core/string": "^10.0.3",
+		"@ctx-core/array": "workspace:*",
+		"@ctx-core/string": "workspace:^10.0.4",
 		"@swc/cli": "^0.1.57",
 		"@swc/core": "^1.2.165",
 		"cheerio": "1.0.0-rc.9",
