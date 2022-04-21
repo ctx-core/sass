@@ -38,7 +38,7 @@
 		"@ctx-core/array": "^26.1.5",
 		"@ctx-core/string": "^10.0.6",
 		"@swc/cli": "^0.1.57",
-		"@swc/core": "^1.2.168",
+		"@swc/core": "^1.2.170",
 		"cheerio": "1.0.0-rc.9",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
