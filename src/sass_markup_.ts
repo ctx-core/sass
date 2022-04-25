@@ -1,4 +1,4 @@
-import cheerio from 'cheerio'
+import { selectAll } from 'css-select'
 import serialize from 'dom-serializer'
 import { Tag } from 'domelementtype'
 import type { AnyNode, Element } from 'domhandler/lib/node'
@@ -21,18 +21,14 @@ export function sass_markup_(builder_opts:builder_opts_I = {}):sass_markup_T {
 				node.type.toString() === Tag.toString()
 				&& (node as Element).name == 'svelte:head'
 			) {
-				const $ = cheerio.load(node)
-				const style_node_a = $(`style[type='text/sass'], style[type='text/scss']`).get()
-				const promise_a = style_node_a.map(async style_node=>{
-					const content = serialize(style_node.childNodes as any)
-					const { code } = await render_sass(builder_opts, {
-						filename,
-						content,
-						attributes,
-					})
+				const style_node_a = selectAll(`style[type='text/sass'], style[type='text/scss']`, node)
+				const promise_a = style_node_a.map(async _style_node=>{
+					const style_node = _style_node as Element
+					const content = serialize(style_node.childNodes)
+					const { code } = await render_sass(builder_opts, { filename, content, attributes, })
 					style_node.attribs.type = 'text/css'
 					delete style_node.attribs.global
-					style_node.children = parseDocument(`<style>${code}</style>`).children
+					style_node.childNodes = parseDocument(`<style>${code}</style>`).children
 					// text_node.data = code
 					return style_node
 				})
