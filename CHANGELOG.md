@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.1.37
+
+### Patch Changes
+
+- css-select: ^4.2.1 -> ^5.0.1
+
 ## 12.1.36
 
 ### Patch Changes
