@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.1.40
+
+### Patch Changes
+
+- sass: ^1.50.1 -> ^1.51.0
+
 ## 12.1.39
 
 ### Patch Changes
