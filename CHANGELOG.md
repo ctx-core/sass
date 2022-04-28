@@ -1,5 +1,12 @@
 # @ctx-core/sass
 
+## 12.1.41
+
+### Patch Changes
+
+- @ctx-core/array: ^26.2.1 -> ^26.2.2
+- css-select: ^5.0.1 -> ^5.1.0
+
 ## 12.1.40
 
 ### Patch Changes
