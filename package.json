@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.45",
+	"version": "12.1.46",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -35,10 +35,10 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^26.2.4",
+		"@ctx-core/array": "^26.3.0",
 		"@ctx-core/string": "^10.0.9",
 		"@swc/cli": "^0.1.57",
-		"@swc/core": "^1.2.187",
+		"@swc/core": "^1.2.189",
 		"css-select": "^5.1.0",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
