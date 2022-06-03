@@ -1,5 +1,12 @@
 # @ctx-core/sass
 
+## 12.1.49
+
+### Patch Changes
+
+- sass: ^1.52.1 -> ^1.52.2
+- .js + .d.ts instead of .ts
+
 ## 12.1.48
 
 ### Patch Changes
