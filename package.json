@@ -38,7 +38,7 @@
 		"@ctx-core/array": "^26.5.1",
 		"@ctx-core/string": "^10.1.0",
 		"@swc/cli": "^0.1.57",
-		"@swc/core": "^1.2.197",
+		"@swc/core": "^1.2.198",
 		"css-select": "^5.1.0",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
