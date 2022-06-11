@@ -36,7 +36,7 @@
 	},
 	"dependencies": {
 		"@ctx-core/array": "^26.5.1",
-		"@ctx-core/string": "^10.0.9",
+		"@ctx-core/string": "^10.1.0",
 		"@swc/cli": "^0.1.57",
 		"@swc/core": "^1.2.197",
 		"css-select": "^5.1.0",
