@@ -7,7 +7,7 @@ Processes sass with postcss & global style support.
 ```javascript
 // rollup.config.js
 import svelte from 'rollup-plugin-svelte'
-import { preprocess_ } from '@ctx-core/svelte'
+import { preprocess_ } from '@ctx-core/svelte/node'
 import { preprocess_sass_ } from '@ctx-core/sass'
 const preprocess__sass = preprocess_sass_()
 const preprocess = preprocess_([
