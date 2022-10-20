@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.66",
+	"version": "12.1.67",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -46,7 +46,7 @@
 		"entities": "^4.4.0",
 		"htmlparser2": "^8.0.1",
 		"node-sass-package-importer": "^5.3.2",
-		"postcss": "^7.0.39",
+		"postcss": "^8.4.18",
 		"sass": "^1.55.0"
 	},
 	"devDependencies": {
@@ -54,9 +54,7 @@
 		"rimraf": "^3.0.2",
 		"typescript": "next"
 	},
-	"noUpdate": [
-		"postcss"
-	],
+	"noUpdate": [],
 	"publishConfig": {
 		"access": "public",
 		"cache": "~/.npm"
