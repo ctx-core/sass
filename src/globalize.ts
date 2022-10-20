@@ -1,9 +1,9 @@
-import type { ContainerBase, Rule } from 'postcss'
+import type { Container, Rule } from 'postcss'
 import { splice_str } from '@ctx-core/string'
 /**
  * Takes a postcss ast & wraps each selector with the `:global()` svelte css directive.
  */
-export function globalize<Ast extends ContainerBase>(ast:Ast) {
+export function globalize<Ast extends Container>(ast:Ast) {
 	const ast_rule = ast as unknown as Rule
 	let selector = '' + (ast_rule.selector || '')
 	if (selector) {
