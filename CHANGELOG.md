@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.1.87
+
+### Patch Changes
+
+- rimraf: ^4.0.1 -> ^4.0.4
+
 ## 12.1.86
 
 ### Patch Changes
