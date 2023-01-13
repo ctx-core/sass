@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.1.85",
+	"version": "12.1.86",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -51,7 +51,7 @@
 	},
 	"devDependencies": {
 		"@types/sass": "^1.43.1",
-		"rimraf": "^3.0.2",
+		"rimraf": "^4.0.1",
 		"typescript": "next"
 	},
 	"noUpdate": [],
