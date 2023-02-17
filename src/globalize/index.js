@@ -1,13 +1,16 @@
-import type { Container, Rule } from 'postcss'
 import { splice_str } from '@ctx-core/string'
 /**
  * Takes a postcss ast & wraps each selector with the `:global()` svelte css directive.
  */
-export function globalize<Ast extends Container>(ast:Ast) {
-	const ast_rule = ast as unknown as Rule
+/**
+ * @param ast{unknown}
+ * @returns {unknown}
+ */
+export function globalize(ast) {
+	const ast_rule = ast
 	let selector = '' + (ast_rule.selector || '')
 	if (selector) {
-		const splice_arg_aa = [] as number[][]
+		const splice_arg_aa = []
 		const selector_length = selector.length
 		let idx = 0
 		const global_str = ':global('
@@ -15,7 +18,10 @@ export function globalize<Ast extends Container>(ast:Ast) {
 		do {
 			const begin_idx = selector.indexOf(global_str, idx)
 			if (begin_idx === -1) break
-			splice_arg_aa.push([begin_idx, global_str_len])
+			splice_arg_aa.push([
+				begin_idx,
+				global_str_len
+			])
 			idx = begin_idx + global_str_len
 			let paren_rc = 1
 			let char
@@ -25,15 +31,18 @@ export function globalize<Ast extends Container>(ast:Ast) {
 				else if (char === '(') paren_rc += 1
 				idx += 1
 			} while (paren_rc && char != null && idx < selector_length)
-			splice_arg_aa.push([idx - 1, 1])
+			splice_arg_aa.push([
+				idx - 1,
+				1
+			])
 		} while (idx !== -1 && idx < selector_length)
 		for (let i = splice_arg_aa.length - 1; i >= 0; i -= 1) {
 			const splice_arg_a = splice_arg_aa[i]
 			selector = splice_str(selector, ...splice_arg_a)
 		}
-//		selector.split(/[\s+[>\+\~]\s*]/)
+		//		selector.split(/[\s+[>\+\~]\s*]/)
 		ast_rule.selector = `:global(${selector})`
-//		ast.selector = `:global(${selector.replace(/:global\((.*)\)/g, '$1')})`
+		//		ast.selector = `:global(${selector.replace(/:global\((.*)\)/g, '$1')})`
 	}
 	return ast
 }

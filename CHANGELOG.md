@@ -1,5 +1,16 @@
 # @ctx-core/sass
 
+## 12.2.0
+
+### Minor Changes
+
+- extract _.js & _.d.ts into directories
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/string@10.2.0
+
 ## 12.1.101
 
 ### Patch Changes
