@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.2.9
+
+### Patch Changes
+
+- clean up dependencies
+
 ## 12.2.8
 
 ### Patch Changes
