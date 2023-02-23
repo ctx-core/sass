@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.2.11",
+	"version": "12.2.12",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -35,7 +35,7 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^26.11.6",
+		"@ctx-core/array": "^26.11.7",
 		"@ctx-core/string": "^10.2.4",
 		"css-select": "^5.1.0",
 		"dom-serializer": "^2.0.0",
