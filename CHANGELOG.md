@@ -1,5 +1,15 @@
 # @ctx-core/sass
 
+## 12.2.18
+
+### Patch Changes
+
+- @ctx-core/array: ^26.11.12 -> ^26.11.13
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/array@26.11.14
+  - @ctx-core/string@10.2.5
+
 ## 12.2.17
 
 ### Patch Changes
