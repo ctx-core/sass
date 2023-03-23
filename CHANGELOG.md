@@ -1,5 +1,13 @@
 # @ctx-core/sass
 
+## 12.2.36
+
+### Patch Changes
+
+- htmlparser2: ^8.0.1 -> ^8.0.2
+- Updated dependencies
+  - @ctx-core/array@26.12.3
+
 ## 12.2.35
 
 ### Patch Changes
