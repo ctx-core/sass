@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.2.69
+
+### Patch Changes
+
+- @ctx-core/monorepo: ^20.3.3 -> ^20.3.4
+- Updated dependencies
+  - @ctx-core/array@26.12.32
+  - @ctx-core/string@12.1.19
+
 ## 12.2.68
 
 ### Patch Changes
