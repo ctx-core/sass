@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.2.80
+
+### Patch Changes
+
+- @ctx-core/array: ^26.12.35 -> ^26.12.36
+
 ## 12.2.79
 
 ### Patch Changes
