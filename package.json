@@ -45,7 +45,7 @@
 		"htmlparser2": "^9.0.0",
 		"node-sass-package-importer": "^5.3.3",
 		"postcss": "^8.4.26",
-		"sass": "^1.63.6"
+		"sass": "^1.64.0"
 	},
 	"devDependencies": {
 		"c8": "^8.0.0",
