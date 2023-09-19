@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.2.116
+
+### Patch Changes
+
+- postcss: ^8.4.29 -> ^8.4.30
+
 ## 12.2.115
 
 ### Patch Changes
