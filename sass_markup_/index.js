@@ -1,17 +1,17 @@
+import { a_present_, compact, flatten } from '@ctx-core/array'
 import { selectAll } from 'css-select'
 import serialize from 'dom-serializer'
 import { Tag } from 'domelementtype'
 import { parseDocument } from 'htmlparser2'
-import { a_present_, compact, flatten } from '@ctx-core/array'
 import { render_sass } from '../render_sass/index.js'
 /**
- * @param builder_opts{import('../_types').builder_opts_T}
+ * @param builder_opts{import('../_types/index.d.ts').builder_opts_T}
  * @returns {import('./index.d.ts').sass_markup_T}
  */
 export function sass_markup_(builder_opts = {}) {
 	return sass_markup
 	/**
-	 * @param opts{import('../_types').opts_T}
+	 * @param opts{import('../_types/index.d.ts').opts_T}
 	 * @returns {Promise<import('./index.d.ts').sass_markup_return_T|undefined>}
 	 */
 	async function sass_markup(opts) {

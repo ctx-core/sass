@@ -6,7 +6,7 @@
  */
 export function sass_style_() {
 	/**
-	 * @param opts{import('../_types').opts_T}
+	 * @param opts{import('../_types/index.d.ts').opts_T}
 	 */
 	return function sass_style(opts) {
 		const { attributes } = opts

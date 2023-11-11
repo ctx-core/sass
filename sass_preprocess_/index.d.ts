@@ -1,6 +1,6 @@
-import type { builder_opts_T } from '../_types'
-import type { sass_markup_T } from '../sass_markup_'
-import type { sass_style_T } from '../sass_style_'
+import type { builder_opts_T } from '../_types/index.js'
+import type { sass_markup_T } from '../sass_markup_/index.js'
+import type { sass_style_T } from '../sass_style_/index.js'
 export declare function sass_preprocess_(builder_opts?:builder_opts_T):sass_preprocess_T
 export interface sass_preprocess_T {
 	style:sass_style_T

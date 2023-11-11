@@ -1,7 +1,7 @@
 import { sass_markup_ } from '../sass_markup_/index.js'
 import { sass_style_ } from '../sass_style_/index.js'
 /**
- * @param builder_opts{import('../_types').builder_opts_T}
+ * @param builder_opts{import('../_types/index.d.ts').builder_opts_T}
  * @returns {import('./index.d.ts').sass_preprocess_T}
  */
 export function sass_preprocess_(builder_opts = {}) {
