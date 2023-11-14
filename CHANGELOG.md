@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.3.2
+
+### Patch Changes
+
+- fix: missing tsconfig.json
+- Updated dependencies
+  - @ctx-core/array@27.0.2
+  - @ctx-core/string@12.4.2
+
 ## 12.3.1
 
 ### Patch Changes
