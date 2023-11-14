@@ -1,5 +1,14 @@
 # @ctx-core/sass
 
+## 12.3.3
+
+### Patch Changes
+
+- package.json: files: + \*.js
+- Updated dependencies
+  - @ctx-core/array@27.0.3
+  - @ctx-core/string@12.4.3
+
 ## 12.3.2
 
 ### Patch Changes
