@@ -1,5 +1,12 @@
 # @ctx-core/sass
 
+## 12.3.5
+
+### Patch Changes
+
+- @ctx-core/string: ^12.4.4 -> ^12.4.5
+- @ctx-core/array: ^27.0.4 -> ^27.0.5
+
 ## 12.3.4
 
 ### Patch Changes
