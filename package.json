@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.3.21",
+	"version": "12.3.22",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -46,8 +46,8 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^27.0.21",
-		"@ctx-core/string": "^12.4.21",
+		"@ctx-core/array": "^27.0.22",
+		"@ctx-core/string": "^12.4.22",
 		"css-select": "^5.1.0",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
@@ -61,7 +61,7 @@
 	"devDependencies": {
 		"c8": "^8.0.1",
 		"check-dts": "^0.7.2",
-		"tsx": "^4.1.4",
+		"tsx": "^4.2.0",
 		"typescript": "next",
 		"uvu": "^0.5.6"
 	},
