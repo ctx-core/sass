@@ -1,5 +1,15 @@
 # @ctx-core/sass
 
+## 12.3.26
+
+### Patch Changes
+
+- tsx: ^4.4.0 -> ^4.5.0
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/array@27.0.26
+  - @ctx-core/string@12.4.26
+
 ## 12.3.25
 
 ### Patch Changes
