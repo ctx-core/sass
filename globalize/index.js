@@ -1,4 +1,4 @@
-import { splice_str } from '@ctx-core/string'
+import { splice_str } from 'ctx-core/string'
 /**
  * Takes a postcss ast & wraps each selector with the `:global()` svelte css directive.
  */
