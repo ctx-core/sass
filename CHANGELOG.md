@@ -1,5 +1,11 @@
 # @ctx-core/sass
 
+## 12.3.102
+
+### Patch Changes
+
+- ctx-core: ^5.23.0 -> ^5.24.0
+
 ## 12.3.101
 
 ### Patch Changes
