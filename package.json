@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.3.163",
+	"version": "12.3.164",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -17,7 +17,11 @@
 		"url": "https://github.com/ctx-core/sass.git"
 	},
 	"license": "Apache-2.0",
-	"author": "Brian Takita",
+	"author": {
+		"name": "Brian Takita",
+		"url": "https://briantakita.me",
+		"email": "info+ctx-core-sass@briantakita.me"
+	},
 	"type": "module",
 	"files": [
 		"*.d.ts",
@@ -48,7 +52,7 @@
 	},
 	"dependencies": {
 		"css-select": "^5.1.0",
-		"ctx-core": "^6.6.0",
+		"ctx-core": "^6.6.1",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
 		"domhandler": "^5.0.3",
