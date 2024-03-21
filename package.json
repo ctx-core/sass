@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.3.165",
+	"version": "12.3.166",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -59,7 +59,7 @@
 		"entities": "^4.5.0",
 		"htmlparser2": "^9.1.0",
 		"node-sass-package-importer": "^5.3.3",
-		"postcss": "^8.4.37",
+		"postcss": "^8.4.38",
 		"sass": "^1.72.0"
 	},
 	"devDependencies": {
