@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.3.205",
+	"version": "12.3.206",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -52,7 +52,7 @@
 	},
 	"dependencies": {
 		"css-select": "^5.1.0",
-		"ctx-core": "^7.2.18",
+		"ctx-core": "^7.2.19",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
 		"domhandler": "^5.0.3",
@@ -60,7 +60,7 @@
 		"htmlparser2": "^9.1.0",
 		"node-sass-package-importer": "^5.3.3",
 		"postcss": "^8.4.38",
-		"sass": "^1.77.5"
+		"sass": "^1.77.6"
 	},
 	"devDependencies": {
 		"c8": "^10.1.2",
