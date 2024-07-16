@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/sass",
-	"version": "12.3.217",
+	"version": "12.3.218",
 	"description": "ctx-core sass",
 	"keywords": [
 		"ctx-core",
@@ -52,7 +52,7 @@
 	},
 	"dependencies": {
 		"css-select": "^5.1.0",
-		"ctx-core": "^7.2.27",
+		"ctx-core": "^7.2.28",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
 		"domhandler": "^5.0.3",
