@@ -51,13 +51,13 @@
 		"disable:test:unit:coverage": "c8 pnpm test:unit"
 	},
 	"dependencies": {
-		"css-select": "^5.2.2",
+		"css-select": "^6.0.0",
 		"ctx-core": "*",
 		"dom-serializer": "^2.0.0",
 		"domelementtype": "2.3.0",
 		"domhandler": "^5.0.3",
 		"entities": "^7.0.1",
-		"htmlparser2": "^9.1.0",
+		"htmlparser2": "^10.1.0",
 		"node-sass-package-importer": "^5.3.3",
 		"postcss": "^8.5.8",
 		"sass": "^1.97.3"
